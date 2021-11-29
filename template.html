@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Spaghetti-Demo</title>
+    
+</head>
+<body style="overflow: hidden;" class="bg-dark">
+   
+    <nav class="navbar navbar-light text-light" style="height : 50px; background-color : rgba(48, 48, 48, 0.973); ">
+        
+    <img src="pic/index/logo.png"style=" color: white;
+    text-shadow: 2px 2px 4px #000000;" width="20px" alt="">
+      <h5 class="ml-5"style=" color: white;
+  text-shadow: 2px 2px 4px #000000;">กรุณาเลือกเวลา</h5>
+      <div class="mr-auto ml-5">
+     
+      <button class="btn btn-success">12:00</button>
+      <button class="btn btn-success ml-3">1:00</button>
+      <button class="btn btn-success ml-3">2:00</button>
+      <button class="btn btn-success ml-3">3:00</button>
+   
+</div>
+
+      </nav>
+   
+          <div class="row">
+              <div class="col-lg-9 mt-5 mb-3 mx-auto">        
+                  <img src="photo1/IMG_001.JPG" class="img-fluid ">
+              </div>
+              <div class="col-lg-2 ml-auto">
+                    <div style=" background-color : rgba(48, 48, 48, 0.973); ">
+                        <div class="col-lg-12 text-light" style="height : 1200px;">
+                            <h3 class="text-center" style=" color: white;
+  text-shadow: 2px 2px 4px #000000;"><b>รูปล่าสุด</b></h3>
+                            <button class="btn btn-success" style="margin-top : 850px; margin-left : 35px; height: 100px; width: 200px; font-size: 30px;">Print</button>
+                        </div>
+                        
+                    </div>
+                </div>
+          </div>
+          
+    
+      
+
+</body>
+</html>
+
+
+  <!--Main Photo Body-->
+  <div class="container-fluid">
+        <div class="row">
+            <!-- MID  style="z-index : 10; position : absolute;"-->
+           <div class="col-lg-9 pr-5  pt-1">
+           <div class="col-lg-12 ml-2 container-fluid" >
+           <nav class="navbar navbar-light bg-light">
+           <h4 class="d-inline-block pt-3 mt-2"><i class="far fa-clock"></i> เลือกเวลาที่ถ่าย</h4><div id="clock_reload" class="d-inline-block pb-3"></div>
+</nav>
+         
+           </div>
+           <div class="item">
+           <img id="show" style="position : absolute;"  src="<?php echo "$thumbnail/IMG_001.jpg";?>" alt="">
+             <img style="z-index : 10; position : absolute; "src="<?php if(file_exists($logo)){ echo $logo;}else{ echo $nologo;}?>" alt="">-
+             
+             
+           </div>
+          </div>
+         
+          <!--Right-->
+       
+         
+        
+        <div class="col-lg-2 ml-4 mt-5 pt-3 mx-auto  " >
+  
+       <div class="col-lg-12 jumbotron" >
+       <h3 class="text-center text-warning mb-1"><i class="fa fa-camera"></i> รูปล่าสุด</h3>
+             <div id="news"></div>
+           <h3 class="mt-2 mb-2 text-center text-warning"><i class="far fa-images"></i> รูปที่เลือก</h3>
+             
+           <div class="mx-auto" style="width:100%;" id="slideshow"></div>
+                       <button type="button" class="btn btn-info btn-lg btn-block mt-5" style="height : 110px;" onclick="printing()"><i class="fa fa-print"></i> ปรินท์</button>
+                     </div>
+               </div>
+     
+     <!--End Body-->
+    
+
+
